@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap");
+
+@import url("./avatar.css");
+@import url("./utilities.css");
+@import url("./alert.css");
+@import url("./badge.css");
+@import url("./button.css");
+@import url("./cards.css");
+@import url("./image.css");
+@import url("./input.css");
+@import url("./list.css");
+@import url("./typography.css");
+@import url("./modal.css");
+@import url("./rating.css");
+@import url("./snackbar.css");
+/* setup */
+:root {
+	--primary-color: #017eff;
+	--primary-color-hover: #1169c2;
+	--secondary-color: #f3f7f8;
+	--primary-font-color: #000;
+	--secondary-font-color: #fff;
+	--bg-color-primary: #fff;
+	--bg-color-secondary: #fff;
+	--hover-color: #eef0f5;
+	--box-shadow: rgb(0 0 0 / 0.2);
+	--font: "Montserrat", sans-serif;
+
+	--primary-border-color: #22bff2;
+	--error-color: red;
+	--success-color: green;
+}
+html[data-theme="dark"] {
+	--primary-color: #fff;
+	--primary-color-hover: #e9e0e0;
+	--secondary-color: #fff;
+	--primary-font-color: #fff;
+	--secondary-font-color: #000;
+	--bg-color-primary: #000101;
+	--bg-color-secondary: #111010;
+	--hover-color: #303030;
+	--box-shadow: rgba(255, 255, 255, 0.2);
+}
+
+html {
+	font-size: 62.5%;
+}
+body {
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+	background-color: var(--bg-color-secondary);
+	color: var(--primary-font-color);
+}
+main {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.main-container {
+	display: grid;
+	grid-template-areas:
+		"header header "
+		"navigation main "
+		"footer footer ";
+	grid-template-columns: 200px 1fr;
+	grid-template-rows:
+		100px
+		1fr;
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+.header {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--bg-color-primary);
+	color: var(--primary-font-color);
+	box-shadow: 0 3px 10px var(--box-shadow);
+	grid-area: header;
+}
+.flex-hz {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+.logo-container {
+	width: 50px;
+	height: 50px;
+}
+.brand-name {
+	color: var(--primary-font-color);
+}
+.link-no-style {
+	text-decoration: none;
+	color: var(--primary-text-color);
+}
+
+.sidebar {
+	grid-area: navigation;
+	background-color: var(--bg-color-secondary);
+	overflow-y: scroll;
+	max-height: calc(100vh - 100px);
+}
+.sidebar::-webkit-scrollbar {
+	display: none;
+}
+.btn-menu {
+	display: none;
+}
+.mobile-sidebar {
+	grid-area: mobile-nav;
+	display: none;
+	position: fixed;
+	width: 100%;
+	background-color: var(--hover-color);
+	z-index: 1;
+}
+.main-content {
+	grid-area: main;
+	background-color: var(--bg-color-secondary);
+	overflow-y: scroll;
+	max-height: calc(100vh - 100px);
+	margin-bottom: 2rem;
+}
+
+.component-container,
+.component-intro,
+.component-example,
+.component-display-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.title {
+	font-size: 3rem;
+	font-weight: 500;
+}
+.sub-title {
+	font-size: 1.8rem;
+}
+
+.component-display-container {
+	flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 4rem;
+	padding: 1rem;
+	border: 2px solid var(--primary-font-color);
+}
+.continer-vertical {
+	flex-direction: column;
+	gap: 0;
+	align-items: flex-start;
+}
+.code-snippet-display {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.drawer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+.drawer-header {
+	justify-self: flex-start;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.drawer-body {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 0 1rem;
+}
+.drawer-item {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	font-size: 1.5rem;
+	border-radius: 2px;
+	padding: 0 1rem;
+}
+.drawer-item:hover {
+	background-color: var(--hover-color);
+	font-size: 2rem;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+	.btn-menu {
+		display: block;
+	}
+	.main-container {
+		grid-template-areas:
+			"header"
+			"mobile-nav"
+			"navigation"
+			"main";
+		grid-template-columns: 100%;
+		grid-template-rows:
+			100px
+			50px
+			0px
+			1fr;
+	}
+}
+
+hr {
+	width: 100%;
+	margin: 4rem 0;
+}
+.link-no-style {
+	text-decoration: none;
+}
