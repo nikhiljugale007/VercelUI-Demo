@@ -79,7 +79,7 @@ main {
 	align-items: center;
 	background-color: var(--bg-color-primary);
 	color: var(--primary-font-color);
-	box-shadow: 0 3px 10px var(--box-shadow);
+	box-shadow: 0 3px 10px var(--box-shadow) inset;
 	grid-area: header;
 }
 .flex-hz {
