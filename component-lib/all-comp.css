@@ -61,10 +61,10 @@ main {
 .main-container {
 	display: grid;
 	grid-template-areas:
-		"header header "
-		"navigation main "
-		"footer footer ";
-	grid-template-columns: 200px 1fr;
+		" .. header header .. "
+		" .. navigation main .. "
+		" .. footer footer .. ";
+	grid-template-columns: 100px 200px 1fr 100px;
 	grid-template-rows:
 		100px
 		1fr;
@@ -78,9 +78,9 @@ main {
 	width: 100%;
 	justify-content: space-between;
 	align-items: center;
-	background-color: var(--bg-color-primary);
+	background-color: var(--bg-color-secondary);
 	color: var(--primary-font-color);
-	box-shadow: 0 3px 10px var(--box-shadow) inset;
+	box-shadow: 0 5px 3px -3px var(--box-shadow);
 	grid-area: header;
 }
 .flex-hz {
@@ -105,7 +105,8 @@ main {
 	grid-area: navigation;
 	background-color: var(--bg-color-secondary);
 	overflow-y: scroll;
-	max-height: calc(100vh - 100px);
+	margin-top: 1rem;
+	max-height: calc(100vh - 100px-2rem);
 }
 .sidebar::-webkit-scrollbar {
 	display: none;
@@ -127,6 +128,7 @@ main {
 	overflow-y: scroll;
 	max-height: calc(100vh - 100px);
 	margin-bottom: 2rem;
+	margin-top: 3rem;
 }
 
 .component-container,
@@ -220,6 +222,9 @@ main {
 			50px
 			0px
 			1fr;
+	}
+	.main-content {
+		margin-top: 0rem;
 	}
 }
 
