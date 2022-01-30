@@ -131,4 +131,7 @@ main {
 	.hero-container div {
 		font-size: 5rem;
 	}
+	.main-container {
+		width: 100%;
+	}
 }
