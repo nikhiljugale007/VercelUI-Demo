@@ -110,6 +110,7 @@ main {
 	background-color: var(--bg-color-secondary);
 	overflow-y: scroll;
 	margin-top: 1rem;
+	overflow-y: scroll;
 	max-height: calc(100vh - 100px-2rem);
 }
 .sidebar::-webkit-scrollbar {
@@ -125,6 +126,7 @@ main {
 	width: 100%;
 	background-color: var(--hover-color);
 	z-index: 1;
+	overflow-y: scroll;
 }
 .main-content {
 	grid-area: main;
