@@ -17,7 +17,7 @@
 /* setup */
 :root {
 	--primary-color: #017eff;
-	--primary-color-hover: #1169c2;
+	--primary-color-hover: #0058b3;
 	--secondary-color: #f3f7f8;
 	--primary-font-color: #000;
 	--secondary-font-color: #fff;
@@ -41,6 +41,8 @@ html[data-theme="dark"] {
 	--bg-color-secondary: #111010;
 	--hover-color: #303030;
 	--box-shadow: rgba(255, 255, 255, 0.2);
+
+	--primary-border-color: #595959;
 }
 
 html {
@@ -201,7 +203,7 @@ main {
 }
 .drawer-item:hover {
 	background-color: var(--hover-color);
-	font-size: 2rem;
+	transform: scale(1.2);
 	border-radius: 5px;
 	cursor: pointer;
 }
