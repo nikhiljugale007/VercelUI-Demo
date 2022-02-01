@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Typography | Docs</title>
+		<link rel="stylesheet" href="./all-comp.css" />
+		<link
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
+		<script>
+			var themeDefault = window.localStorage.getItem("data-theme");
+			if (themeDefault)
+				document.documentElement.setAttribute("data-theme", themeDefault);
+			console.log(themeDefault);
+			function changeTheme() {
+				let theme = localStorage.getItem("data-theme"); // Retrieve saved them from local storage
+				if (theme === "dark") {
+					changeThemeToLight();
+				} else {
+					changeThemeToDark();
+				}
+			}
+
+			let theme = localStorage.getItem("data-theme");
+			const changeThemeToDark = () => {
+				document.documentElement.setAttribute("data-theme", "dark"); // set theme to dark
+				localStorage.setItem("data-theme", "dark"); // save theme to local storage
+			};
+
+			const changeThemeToLight = () => {
+				document.documentElement.setAttribute("data-theme", "light"); // set theme light
+				localStorage.setItem("data-theme", "light"); // save theme to local storage
+			};
+
+			function openMobileSidebar() {
+				var mobileBar = document.getElementById("mobile-sidebar");
+				mobileBar.style.display = "block";
+			}
+			function closeMobileSidebar() {
+				var mobileBar = document.getElementById("mobile-sidebar");
+				mobileBar.style.display = "none";
+			}
+		</script>
+	</head>
+	<body>
+		<main class="main-container">
+			<header class="header">
+				<div class="flex-hz">
+					<button class="btn btn-icon btn-menu" onclick="openMobileSidebar()">
+						<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+					</button>
+					<a class="flex-hz link-no-style" href="../index.html">
+						<div class="logo-container">
+							<img class="img-round" src="./logo.png" />
+						</div>
+						<div class="brand-name typo-label">Vercel-UI</div>
+					</a>
+				</div>
+				<div class="flex-hz">
+					<a href="./installation.html" class="link-no-style">
+						<button
+							class="btn btn-outlined"
+							onclick="location.href='documentation.html'"
+						>
+							Documentation
+						</button>
+					</a>
+					<button class="btn btn-icon" onclick="changeTheme()">
+						<i class="fa fa-adjust fa-lg" aria-hidden="true"></i>
+					</button>
+				</div>
+			</header>
+			<div class="sidebar">
+				<div class="drawer">
+					<div class="drawer-header">
+						<h4 class="typo-bold">Components</h4>
+					</div>
+					<div class="drawer-body">
+						<a class="drawer-item link-no-style" href="./installation.html">
+							<p>Installation</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./avatar.html">
+							<p>Avatar</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./alert.html">
+							<p>Alert</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./badge.html">
+							<p>Badge</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./button.html">
+							<p>Button</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./cards.html">
+							<p>Card</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./images.html">
+							<p>Image</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./input.html">
+							<p>Input</p>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="mobile-sidebar" id="mobile-sidebar">
+				<div class="drawer">
+					<div class="drawer-header">
+						<h4 class="typo-bold">Components</h4>
+						<button class="btn btn-icon" onclick="closeMobileSidebar()">
+							<i class="fa fa-times fa-lg" aria-hidden="true"></i>
+						</button>
+					</div>
+					<div class="drawer-body">
+						<a class="drawer-item link-no-style" href="./installation.html">
+							<p>Installation</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./avatar.html">
+							<p>Avatar</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./alert.html">
+							<p>Alert</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./badge.html">
+							<p>Badge</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./button.html">
+							<p>Button</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./cards.html">
+							<p>Card</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./images.html">
+							<p>Image</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./input.html">
+							<p>Input</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="main-content">
+				<!-- componen-1 -->
+				<div class="component-container">
+					<div class="component-intro">
+						<div class="title">Typography</div>
+						<div class="sub-title">
+							The Typography component makes it easy to apply a default set of
+							font weights and sizes in your application.
+						</div>
+					</div>
+					<div class="component-example">
+						<div class="title">Heading Typography</div>
+						<div class="sub-title">
+							Use classes from h1 to h6 to acheive different heading style as shown below.
+						</div>
+
+						<div class="component-display-container continer-vertical">
+							<div class="h1">h1. Heading</div>
+							<div class="h2">h2. Heading</div>
+							<div class="h3">h3. Heading</div>
+							<div class="h4">h4. Heading</div>
+							<div class="h5">h5. Heading</div>
+							<div class="h6">h6. Heading</div>
+						</div>
+
+						<div class="code-snippet-display">
+							<iframe
+                                src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=solarized+dark&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Cdiv%2520class%253D%2522h1%2522%253Eh1.%2520Heading%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522h2%2522%253Eh2.%2520Heading%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522h3%2522%253Eh3.%2520Heading%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522h4%2522%253Eh4.%2520Heading%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522h5%2522%253Eh5.%2520Heading%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522h6%2522%253Eh6.%2520Heading%253C%252Fdiv%253E"
+                                style="width: 680px; height: 360px; border:0; transform: scale(1); overflow:hidden;"
+                                sandbox="allow-scripts allow-same-origin">
+                            </iframe>
+						</div>
+					</div>
+					<div class="component-example">
+						<div class="title">Special Typography</div>
+						<div class="sub-title">
+							Use respective classes to acheive special Typography such highlighted text, text with line through, label text, etc.
+						</div>
+
+						<div class="component-display-container continer-vertical">
+							<p class="typo-title">This is Title</p>
+							<p class="typo-label">This is Label</p>
+							<p class="typo-subtext">
+								This is a subtext . Lorem ipsum dolor sit, amet consectetur
+								adipisicing elit.
+							</p>
+							<p class="typo-subtext text-line-through">
+								This is text line through. Lorem ipsum dolor sit, amet
+								consectetur adipisicing elit.
+							</p>
+                            <p class="typo-subtext text-highlight ">
+								This is highlighted text. Lorem ipsum dolor sit, amet
+								consectetur adipisicing elit.
+							</p>
+						</div>
+						</div>
+
+						<div class="code-snippet-display">
+							<iframe
+                                src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=solarized+dark&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Cp%2520class%253D%2522typo-title%2522%253EThis%2520is%2520Title%253C%252Fp%253E%250A%253Cp%2520class%253D%2522typo-label%2522%253EThis%2520is%2520Label%253C%252Fp%253E%250A%253Cp%2520class%253D%2522typo-subtext%2522%253E%250A%2520%2520%2520%2520This%2520is%2520a%2520subtext%2520.%2520Lorem%2520ipsum%2520dolor%2520sit%252C%2520amet%2520consectetur%250A%2520%2520%2520%2520adipisicing%2520elit.%250A%253C%252Fp%253E%250A%253Cp%2520class%253D%2522typo-subtext%2520text-line-through%2522%253E%250A%2520%2520%2520%2520This%2520is%2520text%2520line%2520through.%2520Lorem%2520ipsum%2520dolor%2520sit%252C%2520amet%250A%2520%2520%2520%2520consectetur%2520adipisicing%2520elit.%250A%253C%252Fp%253E%250A%253Cp%2520class%253D%2522typo-subtext%2520text-highlight%2520%2522%253E%250A%2520%2520%2520%2520This%2520is%2520highlighted%2520text.%2520Lorem%2520ipsum%2520dolor%2520sit%252C%2520amet%250A%2520%2520%2520%2520consectetur%2520adipisicing%2520elit.%250A%253C%252Fp%253E"
+                                style="width: 680px; height: 430px; border:0; transform: scale(1); overflow:hidden;"
+                                sandbox="allow-scripts allow-same-origin">
+                            </iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

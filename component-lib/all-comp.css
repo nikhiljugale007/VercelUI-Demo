@@ -30,6 +30,7 @@
 	--primary-border-color: #22bff2;
 	--error-color: red;
 	--success-color: green;
+	--highlight-color: #ccff00;
 }
 html[data-theme="dark"] {
 	--primary-color: #fff;
@@ -43,6 +44,7 @@ html[data-theme="dark"] {
 	--box-shadow: rgba(255, 255, 255, 0.2);
 
 	--primary-border-color: #595959;
+	--highlight-color: #ff3333;
 }
 
 html {
