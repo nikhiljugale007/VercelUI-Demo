@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Modal | Docs</title>
+		<link rel="stylesheet" href="./all-comp.css" />
+		<link
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
+		<script>
+			var themeDefault = window.localStorage.getItem("data-theme");
+			if (themeDefault)
+				document.documentElement.setAttribute("data-theme", themeDefault);
+			console.log(themeDefault);
+			function changeTheme() {
+				let theme = localStorage.getItem("data-theme"); // Retrieve saved them from local storage
+				if (theme === "dark") {
+					changeThemeToLight();
+				} else {
+					changeThemeToDark();
+				}
+			}
+
+			let theme = localStorage.getItem("data-theme");
+			const changeThemeToDark = () => {
+				document.documentElement.setAttribute("data-theme", "dark"); // set theme to dark
+				localStorage.setItem("data-theme", "dark"); // save theme to local storage
+			};
+
+			const changeThemeToLight = () => {
+				document.documentElement.setAttribute("data-theme", "light"); // set theme light
+				localStorage.setItem("data-theme", "light"); // save theme to local storage
+			};
+
+			function openMobileSidebar() {
+				var mobileBar = document.getElementById("mobile-sidebar");
+				mobileBar.style.display = "block";
+			}
+			function closeMobileSidebar() {
+				var mobileBar = document.getElementById("mobile-sidebar");
+				mobileBar.style.display = "none";
+			}
+			function openModel() {
+				var modal = document.getElementById("model");
+				model.style.display = "block";
+			}
+
+			function closeModel() {
+				var modal = document.getElementById("model");
+				model.style.display = "none";
+			}
+		</script>
+	</head>
+	<body>
+		<main class="main-container">
+			<header class="header">
+				<div class="flex-hz">
+					<button class="btn btn-icon btn-menu" onclick="openMobileSidebar()">
+						<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+					</button>
+					<a class="flex-hz link-no-style" href="../index.html">
+						<div class="logo-container">
+							<img class="img-round" src="./logo.png" />
+						</div>
+						<div class="brand-name typo-label">Vercel-UI</div>
+					</a>
+				</div>
+				<div class="flex-hz">
+					<a href="./installation.html" class="link-no-style">
+						<button
+							class="btn btn-outlined"
+							onclick="location.href='documentation.html'"
+						>
+							Documentation
+						</button>
+					</a>
+					<button class="btn btn-icon" onclick="changeTheme()">
+						<i class="fa fa-adjust fa-lg" aria-hidden="true"></i>
+					</button>
+				</div>
+			</header>
+			<div class="sidebar">
+				<div class="drawer">
+					<div class="drawer-header">
+						<h4 class="typo-bold">Components</h4>
+					</div>
+					<div class="drawer-body">
+						<a class="drawer-item link-no-style" href="./installation.html">
+							<p>Installation</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./avatar.html">
+							<p>Avatar</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./alert.html">
+							<p>Alert</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./badge.html">
+							<p>Badge</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./button.html">
+							<p>Button</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./cards.html">
+							<p>Card</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./images.html">
+							<p>Image</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./input.html">
+							<p>Input</p>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="mobile-sidebar" id="mobile-sidebar">
+				<div class="drawer">
+					<div class="drawer-header">
+						<h4 class="typo-bold">Components</h4>
+						<button class="btn btn-icon" onclick="closeMobileSidebar()">
+							<i class="fa fa-times fa-lg" aria-hidden="true"></i>
+						</button>
+					</div>
+					<div class="drawer-body">
+						<a class="drawer-item link-no-style" href="./installation.html">
+							<p>Installation</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./avatar.html">
+							<p>Avatar</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./alert.html">
+							<p>Alert</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./badge.html">
+							<p>Badge</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./button.html">
+							<p>Button</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./cards.html">
+							<p>Card</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./images.html">
+							<p>Image</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./input.html">
+							<p>Input</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="main-content">
+				<!-- componen-1 -->
+				<div class="component-container">
+					<div class="component-intro">
+						<div class="title">Modal</div>
+						<div class="sub-title">
+							The modal component provides a solid foundation for creating
+							dialogs, popovers, lightboxes, or whatever else.
+						</div>
+					</div>
+					<div class="component-example">
+						<div class="title">Example</div>
+						<div class="sub-title">
+							Click on live demo button on see example of model component.
+						</div>
+
+						<div class="component-display-container">
+							<button class="btn btn-primary" onclick="openModel()">
+								Live Demo
+							</button>
+							<div class="modal" id="model">
+								<div class="modal-heading">
+									<p class="typo-title">Modal Title</p>
+									<button class="btn btn-icon" onclick="closeModel()">
+										<i class="fa fa-times fa-lg" aria-hidden="true"></i>
+									</button>
+								</div>
+								<div class="modal-body">
+									<p class="typo-subtext">
+										Model body goes here. The modal component provides a solid
+										foundation for creating dialogs, popovers, lightboxes, or
+										whatever else.
+									</p>
+								</div>
+								<div class="modal-footer">
+									<button class="btn btn-primary">Option1</button>
+									<button class="btn btn-outlined">Option2</button>
+								</div>
+							</div>
+						</div>
+						<div class="code-snippet-display">
+							<code>
+								<iframe
+									src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=solarized+dark&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Cdiv%2520class%253D%2522modal%2522%2520id%253D%2522model%2522%253E%250A%2520%2520%253Cdiv%2520class%253D%2522modal-heading%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cp%2520class%253D%2522typo-title%2522%253EModal%2520Title%253C%252Fp%253E%250A%2520%2520%2520%2520%2520%2520%253Cbutton%2520class%253D%2522btn%2520btn-icon%2522%2520onclick%253D%2522closeModel%28%29%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ci%2520class%253D%2522fa%2520fa-times%2520fa-lg%2522%2520aria-hidden%253D%2522true%2522%253E%253C%252Fi%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fbutton%253E%250A%2520%2520%253C%252Fdiv%253E%250A%2520%2520%253Cdiv%2520class%253D%2522modal-body%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cp%2520class%253D%2522typo-subtext%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520Model%2520body%2520goes%2520here.%250A%2520%2520%2520%2520%2520%2520%253C%252Fp%253E%250A%2520%2520%253C%252Fdiv%253E%250A%2520%2520%253Cdiv%2520class%253D%2522modal-footer%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cbutton%2520class%253D%2522btn%2520btn-primary%2522%253ESave%253C%252Fbutton%253E%250A%2520%2520%2520%2520%2520%2520%253Cbutton%2520class%253D%2522btn%2520btn-outlined%2522%253EClose%253C%252Fbutton%253E%250A%2520%2520%253C%252Fdiv%253E%250A%253C%252Fdiv%253E"
+									style="
+										width: 680px;
+										height: 486px;
+										border: 0;
+										transform: scale(1);
+										overflow: hidden;
+									"
+									sandbox="allow-scripts allow-same-origin"
+								>
+								</iframe>
+								<p class="typo-title">Javascript Code</p>
+								<iframe
+									src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=solarized+dark&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=function%2520openModel%28%29%2520%257B%250A%2520%2520%2520%2520var%2520modal%2520%253D%2520document.getElementById%28%2522model-id%2522%29%253B%250A%2520%2520%2520%2520model.style.display%2520%253D%2520%2522block%2522%253B%250A%257D%250A%250Afunction%2520closeModel%28%29%2520%257B%250A%2520%2520%2520%2520var%2520modal%2520%253D%2520document.getElementById%28%2522model-id%2522%29%253B%250A%2520%2520%2520%2520model.style.display%2520%253D%2520%2522none%2522%253B%250A%257D"
+									style="
+										width: 680px;
+										height: 337px;
+										border: 0;
+										transform: scale(1);
+										overflow: hidden;
+									"
+									sandbox="allow-scripts allow-same-origin"
+								>
+								</iframe>
+							</code>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
