@@ -43,14 +43,14 @@
 				var mobileBar = document.getElementById("mobile-sidebar");
 				mobileBar.style.display = "none";
 			}
-			function openModel() {
-				var modal = document.getElementById("model");
-				model.style.display = "block";
-			}
 
+			function openModel() {
+				var modal = document.getElementById("modal");
+				modal.classList.add("show");
+			}
 			function closeModel() {
-				var modal = document.getElementById("model");
-				model.style.display = "none";
+				var modal = document.getElementById("modal");
+				modal.classList.remove("show");
 			}
 		</script>
 	</head>
@@ -191,10 +191,14 @@
 							<button class="btn btn-primary" onclick="openModel()">
 								Live Demo
 							</button>
-							<div class="modal" id="model">
+							<div class="modal" id="modal">
 								<div class="modal-heading">
 									<p class="typo-title">Modal Title</p>
-									<button class="btn btn-icon" onclick="closeModel()">
+									<button
+										class="btn btn-icon"
+										onclick="closeModel()"
+										class="closeModel"
+									>
 										<i class="fa fa-times fa-lg" aria-hidden="true"></i>
 									</button>
 								</div>
