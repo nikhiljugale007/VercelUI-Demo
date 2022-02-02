@@ -241,3 +241,12 @@ hr {
 .link-no-style {
 	text-decoration: none;
 }
+/* style="width: 680px; height: 578px; border:0; transform: scale(1); overflow:hidden;" */
+
+iframe {
+	width: 680px;
+	min-height: 400px;
+	border: 0;
+	transform: scale(1);
+	overflow: scroll;
+}
