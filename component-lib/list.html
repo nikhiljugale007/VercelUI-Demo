@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>List | Docs</title>
+		<link rel="stylesheet" href="./all-comp.css" />
+		<link
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
+		<script>
+			var themeDefault = window.localStorage.getItem("data-theme");
+			if (themeDefault)
+				document.documentElement.setAttribute("data-theme", themeDefault);
+			console.log(themeDefault);
+			function changeTheme() {
+				let theme = localStorage.getItem("data-theme"); // Retrieve saved them from local storage
+				if (theme === "dark") {
+					changeThemeToLight();
+				} else {
+					changeThemeToDark();
+				}
+			}
+
+			let theme = localStorage.getItem("data-theme");
+			const changeThemeToDark = () => {
+				document.documentElement.setAttribute("data-theme", "dark"); // set theme to dark
+				localStorage.setItem("data-theme", "dark"); // save theme to local storage
+			};
+
+			const changeThemeToLight = () => {
+				document.documentElement.setAttribute("data-theme", "light"); // set theme light
+				localStorage.setItem("data-theme", "light"); // save theme to local storage
+			};
+
+			function openMobileSidebar() {
+				var mobileBar = document.getElementById("mobile-sidebar");
+				mobileBar.style.display = "block";
+			}
+			function closeMobileSidebar() {
+				var mobileBar = document.getElementById("mobile-sidebar");
+				mobileBar.style.display = "none";
+			}
+		</script>
+	</head>
+	<body>
+		<main class="main-container">
+			<header class="header">
+				<div class="flex-hz">
+					<button class="btn btn-icon btn-menu" onclick="openMobileSidebar()">
+						<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+					</button>
+					<a class="flex-hz link-no-style" href="../index.html">
+						<div class="logo-container">
+							<img class="img-round" src="./logo.png" />
+						</div>
+						<div class="brand-name typo-label">Vercel-UI</div>
+					</a>
+				</div>
+				<div class="flex-hz">
+					<a href="./installation.html" class="link-no-style">
+						<button
+							class="btn btn-outlined"
+							onclick="location.href='documentation.html'"
+						>
+							Documentation
+						</button>
+					</a>
+					<button class="btn btn-icon" onclick="changeTheme()">
+						<i class="fa fa-adjust fa-lg" aria-hidden="true"></i>
+					</button>
+				</div>
+			</header>
+			<div class="sidebar">
+				<div class="drawer">
+					<div class="drawer-header">
+						<h4 class="typo-label">Getting Started</h4>
+					</div>
+					<div class="drawer-body">
+						<a class="drawer-item link-no-style" href="./installation.html">
+							<p>Installation</p>
+						</a>
+					</div>
+					<div class="drawer-header">
+						<h4 class="typo-label">Components</h4>
+					</div>
+					<div class="drawer-body">
+						<a class="drawer-item link-no-style" href="./avatar.html">
+							<p>Avatar</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./alert.html">
+							<p>Alert</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./badge.html">
+							<p>Badge</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./button.html">
+							<p>Button</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./cards.html">
+							<p>Card</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./images.html">
+							<p>Image</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./input.html">
+							<p>Input</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./typography.html">
+							<p>Typography</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./modal.html">
+							<p>Modal</p>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="mobile-sidebar" id="mobile-sidebar">
+				<div class="drawer">
+					<div class="drawer-header">
+						<h4 class="typo-label">Getting Started</h4>
+					</div>
+					<div class="drawer-body">
+						<a class="drawer-item link-no-style" href="./installation.html">
+							<p>Installation</p>
+						</a>
+					</div>
+					<div class="drawer-header">
+						<h4 class="typo-label">Components</h4>
+					</div>
+					<div class="drawer-body">
+						<a class="drawer-item link-no-style" href="./avatar.html">
+							<p>Avatar</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./alert.html">
+							<p>Alert</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./badge.html">
+							<p>Badge</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./button.html">
+							<p>Button</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./cards.html">
+							<p>Card</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./images.html">
+							<p>Image</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./input.html">
+							<p>Input</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./typography.html">
+							<p>Typography</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./modal.html">
+							<p>Modal</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="main-content">
+				<!-- componen-1 -->
+				<div class="component-container">
+					<div class="component-intro">
+						<div class="title">List</div>
+						<div class="sub-title">
+							Lists can be used at so many places, navigation bar, stacked
+							notifications, article pages, etc.
+						</div>
+					</div>
+					<div class="component-example">
+						<div class="title">Unordered List</div>
+						<div class="sub-title">
+							There are 4 types of unorderd list.Add class according to bullet
+							style. Copy html code below and add your desired list items.
+						</div>
+
+						<div class="component-display-container">
+							<ul class="list">
+								<li class="list-item">list item1</li>
+								<li class="list-item">list item2</li>
+								<li class="list-item">list item3</li>
+							</ul>
+							<ul class="list list-style-square">
+								<li class="list-item">list item1</li>
+								<li class="list-item">list item2</li>
+								<li class="list-item">list item3</li>
+							</ul>
+							<ul class="list list-style-circle">
+								<li class="list-item">list item1</li>
+								<li class="list-item">list item2</li>
+								<li class="list-item">list item3</li>
+							</ul>
+							<ul class="list list-style-nostyle">
+								<li class="list-item">list item1</li>
+								<li class="list-item">list item2</li>
+								<li class="list-item">list item3</li>
+							</ul>
+						</div>
+
+						<div class="code-snippet-display">
+							<iframe
+								src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=solarized+dark&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Cul%2520class%253D%2522list%2522%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item1%253C%252Fli%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item2%253C%252Fli%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item3%253C%252Fli%253E%250A%253C%252Ful%253E%250A%253Cul%2520class%253D%2522list%2520list-style-square%2522%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item1%253C%252Fli%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item2%253C%252Fli%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item3%253C%252Fli%253E%250A%253C%252Ful%253E%250A%253Cul%2520class%253D%2522list%2520list-style-circle%2522%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item1%253C%252Fli%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item2%253C%252Fli%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item3%253C%252Fli%253E%250A%253C%252Ful%253E%250A%253Cul%2520class%253D%2522list%2520list-style-nostyle%2522%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item1%253C%252Fli%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item2%253C%252Fli%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item3%253C%252Fli%253E%250A%253C%252Ful%253E"
+								sandbox="allow-scripts allow-same-origin"
+							>
+							</iframe>
+						</div>
+					</div>
+					<div class="component-example">
+						<div class="title">Ordered List</div>
+						<div class="sub-title">
+							There are 3 types of orderd list.Add class according to bullet
+							style. Copy html code below and add your desired list items.
+						</div>
+
+						<div class="component-display-container">
+							<ol class="list list-style-numbered">
+								<li class="list-item">list item1</li>
+								<li class="list-item">list item2</li>
+								<li class="list-item">list item3</li>
+							</ol>
+							<ol class="list list-style-alphabetical">
+								<li class="list-item">list item1</li>
+								<li class="list-item">list item2</li>
+								<li class="list-item">list item3</li>
+							</ol>
+							<ol class="list list-style-roman">
+								<li class="list-item">list item1</li>
+								<li class="list-item">list item2</li>
+								<li class="list-item">list item3</li>
+							</ol>
+						</div>
+
+						<div class="code-snippet-display">
+							<iframe
+								src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=solarized+dark&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Col%2520class%253D%2522list%2520list-style-numbered%2522%253E%2520%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item1%253C%252Fli%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item2%253C%252Fli%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item3%253C%252Fli%253E%250A%253C%252Fol%253E%250A%253Col%2520class%253D%2522list%2520list-style-alphabetical%2522%253E%2520%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item1%253C%252Fli%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item2%253C%252Fli%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item3%253C%252Fli%253E%250A%253C%252Fol%253E%250A%253Col%2520class%253D%2522list%2520list-style-roman%2522%253E%2520%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item1%253C%252Fli%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item2%253C%252Fli%253E%250A%2520%2520%253Cli%2520class%253D%2522list-item%2522%253Elist%2520item3%253C%252Fli%253E%250A%253C%252Fol%253E"
+								sandbox="allow-scripts allow-same-origin"
+							>
+							</iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
