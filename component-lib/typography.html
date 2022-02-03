@@ -14,7 +14,6 @@
 			var themeDefault = window.localStorage.getItem("data-theme");
 			if (themeDefault)
 				document.documentElement.setAttribute("data-theme", themeDefault);
-			console.log(themeDefault);
 			function changeTheme() {
 				let theme = localStorage.getItem("data-theme"); // Retrieve saved them from local storage
 				if (theme === "dark") {
@@ -26,13 +25,13 @@
 
 			let theme = localStorage.getItem("data-theme");
 			const changeThemeToDark = () => {
-				document.documentElement.setAttribute("data-theme", "dark"); // set theme to dark
-				localStorage.setItem("data-theme", "dark"); // save theme to local storage
+				document.documentElement.setAttribute("data-theme", "dark"); 
+				localStorage.setItem("data-theme", "dark"); 
 			};
 
 			const changeThemeToLight = () => {
-				document.documentElement.setAttribute("data-theme", "light"); // set theme light
-				localStorage.setItem("data-theme", "light"); // save theme to local storage
+				document.documentElement.setAttribute("data-theme", "light"); 
+				localStorage.setItem("data-theme", "light"); 
 			};
 
 			function openMobileSidebar() {
