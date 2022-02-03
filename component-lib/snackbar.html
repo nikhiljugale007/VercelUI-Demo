@@ -11,7 +11,7 @@
 			rel="stylesheet"
 		/>
 		<script>
-			var themeDefault = window.localStorage.getItem("data-theme");
+			let themeDefault = window.localStorage.getItem("data-theme");
 			if (themeDefault)
 				document.documentElement.setAttribute("data-theme", themeDefault);
 			console.log(themeDefault);
