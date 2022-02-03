@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Snackbar | Docs</title>
+		<link rel="stylesheet" href="./all-comp.css" />
+		<link
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
+		<script>
+			var themeDefault = window.localStorage.getItem("data-theme");
+			if (themeDefault)
+				document.documentElement.setAttribute("data-theme", themeDefault);
+			console.log(themeDefault);
+			function changeTheme() {
+				let theme = localStorage.getItem("data-theme"); // Retrieve saved them from local storage
+				if (theme === "dark") {
+					changeThemeToLight();
+				} else {
+					changeThemeToDark();
+				}
+			}
+
+			let theme = localStorage.getItem("data-theme");
+			const changeThemeToDark = () => {
+				document.documentElement.setAttribute("data-theme", "dark"); // set theme to dark
+				localStorage.setItem("data-theme", "dark"); // save theme to local storage
+			};
+
+			const changeThemeToLight = () => {
+				document.documentElement.setAttribute("data-theme", "light"); // set theme light
+				localStorage.setItem("data-theme", "light"); // save theme to local storage
+			};
+
+			function openMobileSidebar() {
+				var mobileBar = document.getElementById("mobile-sidebar");
+				mobileBar.style.display = "block";
+			}
+			function closeMobileSidebar() {
+				var mobileBar = document.getElementById("mobile-sidebar");
+				mobileBar.style.display = "none";
+			}
+		</script>
+	</head>
+	<body>
+		<main class="main-container">
+			<header class="header">
+				<div class="flex-hz">
+					<button class="btn btn-icon btn-menu" onclick="openMobileSidebar()">
+						<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+					</button>
+					<a class="flex-hz link-no-style" href="../index.html">
+						<div class="logo-container">
+							<img class="img-round" src="./logo.png" />
+						</div>
+						<div class="brand-name typo-label">Vercel-UI</div>
+					</a>
+				</div>
+				<div class="flex-hz">
+					<a href="./installation.html" class="link-no-style">
+						<button
+							class="btn btn-outlined"
+							onclick="location.href='documentation.html'"
+						>
+							Documentation
+						</button>
+					</a>
+					<button class="btn btn-icon" onclick="changeTheme()">
+						<i class="fa fa-adjust fa-lg" aria-hidden="true"></i>
+					</button>
+				</div>
+			</header>
+			<div class="sidebar">
+				<div class="drawer">
+					<div class="drawer-header">
+						<h4 class="typo-label">Getting Started</h4>
+					</div>
+					<div class="drawer-body">
+						<a class="drawer-item link-no-style" href="./installation.html">
+							<p>Installation</p>
+						</a>
+					</div>
+					<div class="drawer-header">
+						<h4 class="typo-label">Components</h4>
+					</div>
+					<div class="drawer-body">
+						<a class="drawer-item link-no-style" href="./avatar.html">
+							<p>Avatar</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./alert.html">
+							<p>Alert</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./badge.html">
+							<p>Badge</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./button.html">
+							<p>Button</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./cards.html">
+							<p>Card</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./images.html">
+							<p>Image</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./input.html">
+							<p>Input</p>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="mobile-sidebar" id="mobile-sidebar">
+				<div class="drawer">
+					<div class="drawer-header">
+						<h4 class="typo-label">Getting Started</h4>
+					</div>
+					<div class="drawer-body">
+						<a class="drawer-item link-no-style" href="./installation.html">
+							<p>Installation</p>
+						</a>
+					</div>
+					<div class="drawer-header">
+						<h4 class="typo-label">Components</h4>
+					</div>
+					<div class="drawer-body">
+						<a class="drawer-item link-no-style" href="./avatar.html">
+							<p>Avatar</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./alert.html">
+							<p>Alert</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./badge.html">
+							<p>Badge</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./button.html">
+							<p>Button</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./cards.html">
+							<p>Card</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./images.html">
+							<p>Image</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./input.html">
+							<p>Input</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="main-content">
+				<!-- componen-1 -->
+				<div class="component-container">
+					<div class="component-intro">
+						<div class="title">Snackbar / Toast</div>
+						<div class="sub-title">
+							This component can be used for toast or snackbar component. Toast
+							is mostly used to show feedback message. Snackbar is to used show
+							message that need user action .
+						</div>
+					</div>
+					<div class="component-example">
+						<div class="title">Example</div>
+						<div class="sub-title"></div>
+
+						<div class="component-display-container">
+							<div class="snackbar snackbar-primary">
+								This is primary
+								<button class="snackbar-action">
+									<i class="fa fa-times fa-lg" aria-hidden="true"></i>
+								</button>
+							</div>
+							<div class="snackbar snackbar-secondary">
+								This is secondary alert
+								<button class="snackbar-action">
+									<i class="fa fa-times fa-lg" aria-hidden="true"></i>
+								</button>
+							</div>
+							<div class="snackbar snackbar-danger">
+								Can't send photo .
+								<button class="snackbar-action">
+									<i class="fa fa-times fa-lg" aria-hidden="true"></i>
+								</button>
+							</div>
+							<div class="snackbar snackbar-success">
+								Photo sent successfully
+								<button class="snackbar-action">
+									<i class="fa fa-times fa-lg" aria-hidden="true"></i>
+								</button>
+							</div>
+						</div>
+						<div class="code-snippet-display">
+							<code>
+								<iframe
+									src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=solarized+dark&wt=sharp&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Cdiv%2520class%253D%2522alert%2520alert-primary%2522%253E%250A%2509%253Cp%253EThis%2520is%2520primary%2520alert.%253C%252Fp%253E%250A%2509%253Ci%2520class%253D%2522fas%2520fa-times%2520fa-lg%2522%253E%253C%252Fi%253E%250A%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522alert%2520alert-secondary%2522%253E%250A%2509%253Cp%253EThis%2520is%2520secondary%2520alert.%253C%252Fp%253E%250A%2509%253Ci%2520class%253D%2522fas%2520fa-times%2520fa-lg%2522%253E%253C%252Fi%253E%250A%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522alert%2520alert-danger%2522%253E%250A%2509%253Cdiv%2520class%253D%2522alert-sub-container%2522%253E%250A%2509%2509%253Ci%2520class%253D%2522fas%2520fa-exclamation-triangle%2522%253E%253C%252Fi%253E%250A%2509%2509%253Cp%253EThis%2520is%2520danger%2520alert.%253C%252Fp%253E%250A%2509%253C%252Fdiv%253E%250A%2509%253Ci%2520class%253D%2522fas%2520fa-times%2520fa-lg%2522%253E%253C%252Fi%253E%250A%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522alert%2520alert-success%2522%253E%250A%2509%253Cdiv%2520class%253D%2522alert-sub-container%2522%253E%250A%2509%2509%253Ci%2520class%253D%2522far%2520fa-check-circle%2520fa-lg%2522%253E%253C%252Fi%253E%250A%2509%2509%253Cp%253EThis%2520is%2520success%2520alert.%253C%252Fp%253E%250A%2509%253C%252Fdiv%253E%250A%2509%253Ci%2520class%253D%2522fas%2520fa-times%2520fa-lg%2522%253E%253C%252Fi%253E%250A%253C%252Fdiv%253E"
+									style="
+										width: 680px;
+										height: 480px;
+										border: 0;
+										transform: scale(1);
+										overflow: hidden;
+									"
+									sandbox="allow-scripts allow-same-origin"
+								>
+								</iframe>
+							</code>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
