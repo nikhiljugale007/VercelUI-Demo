@@ -18,38 +18,7 @@
 
 /* setup */
 
-/* Light
---primary-color = 0060C3
---dark-primary-color= 0059B2
---primary-font-color = 0A1929; black
---complimentary-font-color = FFFEFE  white
-
---primary-bg-color= FFFEFE
---secondary-bg-color= F2F6F8
---border-color: E4E6EB
-
-DARK:
---primary-color = 0080ff
---dark-primary-color= 0080ff
---primary-font-color = 0080ff; black
---complimentary-font-color = 0080ff  white
-
---primary-bg-color= 0080ff
---secondary-bg-color= 0080ff
---border-color: E4E6EB
-
- */
-
 :root {
-	/* --primary-color: #017eff;
-	--primary-color-hover: #0058b3;
-	--secondary-color: #f3f7f8;
-	--primary-font-color: #000;
-	--secondary-font-color: #fff;
-	--bg-color-primary: #fff;
-	--bg-color-secondary: #fff;
-	--hover-color: #eef0f5;
-     */
 	--primary-color: #0060c3;
 	--dark-primary-color: #0059b2;
 
