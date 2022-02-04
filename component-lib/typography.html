@@ -59,16 +59,16 @@
 					</a>
 				</div>
 				<div class="flex-hz">
-					<a href="./installation.html" class="link-no-style">
-						<button
-							class="btn btn-outlined"
-							onclick="location.href='documentation.html'"
-						>
-							Documentation
-						</button>
+					<a
+						class="btn btn-icon"
+						href="https://github.com/nikhiljugale007/Vercel-UI"
+						target="_blank"
+					>
+						<i class="fa fa-github fa-2x" aria-hidden="true"></i>
 					</a>
+
 					<button class="btn btn-icon" onclick="changeTheme()">
-						<i class="fa fa-adjust fa-lg" aria-hidden="true"></i>
+						<i class="fa fa-adjust fa-2x" aria-hidden="true"></i>
 					</button>
 				</div>
 			</header>
@@ -113,6 +113,18 @@
 						<a class="drawer-item link-no-style" href="./modal.html">
 							<p>Modal</p>
 						</a>
+						<a class="drawer-item link-no-style" href="./list.html">
+							<p>List</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./rating.html">
+							<p>Rating</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./snackbar.html">
+							<p>Snackbar</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./grid.html">
+							<p>Grid</p>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -121,6 +133,9 @@
 				<div class="drawer">
 					<div class="drawer-header">
 						<h4 class="typo-label">Getting Started</h4>
+						<button class="btn btn-icon" onclick="closeMobileSidebar()">
+							<i class="fa fa-times fa-lg" aria-hidden="true"></i>
+						</button>
 					</div>
 					<div class="drawer-body">
 						<a class="drawer-item link-no-style" href="./installation.html">
@@ -158,6 +173,18 @@
 						<a class="drawer-item link-no-style" href="./modal.html">
 							<p>Modal</p>
 						</a>
+						<a class="drawer-item link-no-style" href="./list.html">
+							<p>List</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./rating.html">
+							<p>Rating</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./snackbar.html">
+							<p>Snackbar</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./grid.html">
+							<p>Grid</p>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -189,7 +216,6 @@
 						<div class="code-snippet-display">
 							<iframe
                                 src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=solarized+dark&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Cdiv%2520class%253D%2522h1%2522%253Eh1.%2520Heading%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522h2%2522%253Eh2.%2520Heading%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522h3%2522%253Eh3.%2520Heading%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522h4%2522%253Eh4.%2520Heading%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522h5%2522%253Eh5.%2520Heading%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522h6%2522%253Eh6.%2520Heading%253C%252Fdiv%253E"
-                                style="width: 680px; height: 360px; border:0; transform: scale(1); overflow:hidden;"
                                 sandbox="allow-scripts allow-same-origin">
                             </iframe>
 						</div>
@@ -229,7 +255,6 @@
 						<div class="code-snippet-display">
 							<iframe
                                 src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=solarized+dark&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Cp%2520class%253D%2522typo-title%2522%253EThis%2520is%2520Title%253C%252Fp%253E%250A%253Cp%2520class%253D%2522typo-label%2522%253EThis%2520is%2520Label%253C%252Fp%253E%250A%253Cp%2520class%253D%2522typo-subtext%2522%253E%250A%2520%2520%2520%2520This%2520is%2520a%2520subtext%2520.%2520Lorem%2520ipsum%2520dolor%2520sit%252C%2520amet%2520consectetur%250A%2520%2520%2520%2520adipisicing%2520elit.%250A%253C%252Fp%253E%250A%253Cp%2520class%253D%2522typo-subtext%2520text-line-through%2522%253E%250A%2520%2520%2520%2520This%2520is%2520text%2520line%2520through.%2520Lorem%2520ipsum%2520dolor%2520sit%252C%2520amet%250A%2520%2520%2520%2520consectetur%2520adipisicing%2520elit.%250A%253C%252Fp%253E%250A%253Cp%2520class%253D%2522typo-subtext%2520text-bold%2522%253E%250A%2520%2520%2520%2520This%2520is%2520text%2520line%2520through.%2520Lorem%2520ipsum%2520dolor%2520sit%252C%2520amet%250A%2520%2520%2520%2520consectetur%2520adipisicing%2520elit.%250A%253C%252Fp%253E%250A%253Cp%2520class%253D%2522typo-subtext%2520text-italic%2522%253E%250A%2520%2520%2520%2520This%2520is%2520text%2520line%2520through.%2520Lorem%2520ipsum%2520dolor%2520sit%252C%2520amet%250A%2520%2520%2520%2520consectetur%2520adipisicing%2520elit.%250A%253C%252Fp%253E%250A%253Cp%2520class%253D%2522typo-subtext%2520text-highlight%2520%2522%253E%250A%2520%2520%2520%2520This%2520is%2520highlighted%2520text.%2520Lorem%2520ipsum%2520dolor%2520sit%252C%2520amet%250A%2520%2520%2520%2520consectetur%2520adipisicing%2520elit.%250A%253C%252Fp%253E"
-                                style="width: 680px; height: 578px; border:0; transform: scale(1); overflow:hidden;"
                                 sandbox="allow-scripts allow-same-origin">
                             </iframe>
 						</div>

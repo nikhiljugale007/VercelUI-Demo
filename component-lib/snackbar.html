@@ -85,16 +85,16 @@
 					</a>
 				</div>
 				<div class="flex-hz">
-					<a href="./installation.html" class="link-no-style">
-						<button
-							class="btn btn-outlined"
-							onclick="location.href='documentation.html'"
-						>
-							Documentation
-						</button>
+					<a
+						class="btn btn-icon"
+						href="https://github.com/nikhiljugale007/Vercel-UI"
+						target="_blank"
+					>
+						<i class="fa fa-github fa-2x" aria-hidden="true"></i>
 					</a>
+
 					<button class="btn btn-icon" onclick="changeTheme()">
-						<i class="fa fa-adjust fa-lg" aria-hidden="true"></i>
+						<i class="fa fa-adjust fa-2x" aria-hidden="true"></i>
 					</button>
 				</div>
 			</header>
@@ -133,6 +133,24 @@
 						<a class="drawer-item link-no-style" href="./input.html">
 							<p>Input</p>
 						</a>
+						<a class="drawer-item link-no-style" href="./typography.html">
+							<p>Typography</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./modal.html">
+							<p>Modal</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./list.html">
+							<p>List</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./rating.html">
+							<p>Rating</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./snackbar.html">
+							<p>Snackbar</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./grid.html">
+							<p>Grid</p>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -141,6 +159,9 @@
 				<div class="drawer">
 					<div class="drawer-header">
 						<h4 class="typo-label">Getting Started</h4>
+						<button class="btn btn-icon" onclick="closeMobileSidebar()">
+							<i class="fa fa-times fa-lg" aria-hidden="true"></i>
+						</button>
 					</div>
 					<div class="drawer-body">
 						<a class="drawer-item link-no-style" href="./installation.html">
@@ -171,6 +192,24 @@
 						</a>
 						<a class="drawer-item link-no-style" href="./input.html">
 							<p>Input</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./typography.html">
+							<p>Typography</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./modal.html">
+							<p>Modal</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./list.html">
+							<p>List</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./rating.html">
+							<p>Rating</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./snackbar.html">
+							<p>Snackbar</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./grid.html">
+							<p>Grid</p>
 						</a>
 					</div>
 				</div>
@@ -219,13 +258,6 @@
 							<code>
 								<iframe
 									src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=solarized+dark&wt=sharp&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Cdiv%2520class%253D%2522alert%2520alert-primary%2522%253E%250A%2509%253Cp%253EThis%2520is%2520primary%2520alert.%253C%252Fp%253E%250A%2509%253Ci%2520class%253D%2522fas%2520fa-times%2520fa-lg%2522%253E%253C%252Fi%253E%250A%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522alert%2520alert-secondary%2522%253E%250A%2509%253Cp%253EThis%2520is%2520secondary%2520alert.%253C%252Fp%253E%250A%2509%253Ci%2520class%253D%2522fas%2520fa-times%2520fa-lg%2522%253E%253C%252Fi%253E%250A%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522alert%2520alert-danger%2522%253E%250A%2509%253Cdiv%2520class%253D%2522alert-sub-container%2522%253E%250A%2509%2509%253Ci%2520class%253D%2522fas%2520fa-exclamation-triangle%2522%253E%253C%252Fi%253E%250A%2509%2509%253Cp%253EThis%2520is%2520danger%2520alert.%253C%252Fp%253E%250A%2509%253C%252Fdiv%253E%250A%2509%253Ci%2520class%253D%2522fas%2520fa-times%2520fa-lg%2522%253E%253C%252Fi%253E%250A%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522alert%2520alert-success%2522%253E%250A%2509%253Cdiv%2520class%253D%2522alert-sub-container%2522%253E%250A%2509%2509%253Ci%2520class%253D%2522far%2520fa-check-circle%2520fa-lg%2522%253E%253C%252Fi%253E%250A%2509%2509%253Cp%253EThis%2520is%2520success%2520alert.%253C%252Fp%253E%250A%2509%253C%252Fdiv%253E%250A%2509%253Ci%2520class%253D%2522fas%2520fa-times%2520fa-lg%2522%253E%253C%252Fi%253E%250A%253C%252Fdiv%253E"
-									style="
-										width: 680px;
-										height: 480px;
-										border: 0;
-										transform: scale(1);
-										overflow: hidden;
-									"
 									sandbox="allow-scripts allow-same-origin"
 								>
 								</iframe>
@@ -274,13 +306,6 @@
 							<code>
 								<iframe
 									src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=solarized+dark&wt=sharp&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Cdiv%2520class%253D%2522alert%2520alert-primary%2522%253E%250A%2509%253Cp%253EThis%2520is%2520primary%2520alert.%253C%252Fp%253E%250A%2509%253Ci%2520class%253D%2522fas%2520fa-times%2520fa-lg%2522%253E%253C%252Fi%253E%250A%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522alert%2520alert-secondary%2522%253E%250A%2509%253Cp%253EThis%2520is%2520secondary%2520alert.%253C%252Fp%253E%250A%2509%253Ci%2520class%253D%2522fas%2520fa-times%2520fa-lg%2522%253E%253C%252Fi%253E%250A%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522alert%2520alert-danger%2522%253E%250A%2509%253Cdiv%2520class%253D%2522alert-sub-container%2522%253E%250A%2509%2509%253Ci%2520class%253D%2522fas%2520fa-exclamation-triangle%2522%253E%253C%252Fi%253E%250A%2509%2509%253Cp%253EThis%2520is%2520danger%2520alert.%253C%252Fp%253E%250A%2509%253C%252Fdiv%253E%250A%2509%253Ci%2520class%253D%2522fas%2520fa-times%2520fa-lg%2522%253E%253C%252Fi%253E%250A%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522alert%2520alert-success%2522%253E%250A%2509%253Cdiv%2520class%253D%2522alert-sub-container%2522%253E%250A%2509%2509%253Ci%2520class%253D%2522far%2520fa-check-circle%2520fa-lg%2522%253E%253C%252Fi%253E%250A%2509%2509%253Cp%253EThis%2520is%2520success%2520alert.%253C%252Fp%253E%250A%2509%253C%252Fdiv%253E%250A%2509%253Ci%2520class%253D%2522fas%2520fa-times%2520fa-lg%2522%253E%253C%252Fi%253E%250A%253C%252Fdiv%253E"
-									style="
-										width: 680px;
-										height: 480px;
-										border: 0;
-										transform: scale(1);
-										overflow: hidden;
-									"
 									sandbox="allow-scripts allow-same-origin"
 								>
 								</iframe>
