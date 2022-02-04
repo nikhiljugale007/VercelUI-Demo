@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grid | Docs</title>
+		<link rel="stylesheet" href="./all-comp.css" />
+		<link
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
+		<script>
+			var themeDefault = window.localStorage.getItem("data-theme");
+			if (themeDefault)
+				document.documentElement.setAttribute("data-theme", themeDefault);
+			console.log(themeDefault);
+			function changeTheme() {
+				let theme = localStorage.getItem("data-theme"); // Retrieve saved them from local storage
+				if (theme === "dark") {
+					changeThemeToLight();
+				} else {
+					changeThemeToDark();
+				}
+			}
+
+			let theme = localStorage.getItem("data-theme");
+			const changeThemeToDark = () => {
+				document.documentElement.setAttribute("data-theme", "dark"); // set theme to dark
+				localStorage.setItem("data-theme", "dark"); // save theme to local storage
+			};
+
+			const changeThemeToLight = () => {
+				document.documentElement.setAttribute("data-theme", "light"); // set theme light
+				localStorage.setItem("data-theme", "light"); // save theme to local storage
+			};
+
+			function openMobileSidebar() {
+				var mobileBar = document.getElementById("mobile-sidebar");
+				mobileBar.style.display = "block";
+			}
+			function closeMobileSidebar() {
+				var mobileBar = document.getElementById("mobile-sidebar");
+				mobileBar.style.display = "none";
+			}
+		</script>
+	</head>
+	<body>
+		<main class="main-container">
+			<header class="header">
+				<div class="flex-hz">
+					<button class="btn btn-icon btn-menu" onclick="openMobileSidebar()">
+						<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+					</button>
+					<a class="flex-hz link-no-style" href="../index.html">
+						<div class="logo-container">
+							<img class="img-round" src="./logo.png" />
+						</div>
+						<div class="brand-name typo-label">Vercel-UI</div>
+					</a>
+				</div>
+				<div class="flex-hz">
+					<a href="./installation.html" class="link-no-style">
+						<button
+							class="btn btn-outlined"
+							onclick="location.href='documentation.html'"
+						>
+							Documentation
+						</button>
+					</a>
+					<button class="btn btn-icon" onclick="changeTheme()">
+						<i class="fa fa-adjust fa-lg" aria-hidden="true"></i>
+					</button>
+				</div>
+			</header>
+			<div class="sidebar">
+				<div class="drawer">
+					<div class="drawer-header">
+						<h4 class="typo-label">Getting Started</h4>
+					</div>
+					<div class="drawer-body">
+						<a class="drawer-item link-no-style" href="./installation.html">
+							<p>Installation</p>
+						</a>
+					</div>
+					<div class="drawer-header">
+						<h4 class="typo-label">Components</h4>
+					</div>
+					<div class="drawer-body">
+						<a class="drawer-item link-no-style" href="./avatar.html">
+							<p>Avatar</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./alert.html">
+							<p>Alert</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./badge.html">
+							<p>Badge</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./button.html">
+							<p>Button</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./cards.html">
+							<p>Card</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./images.html">
+							<p>Image</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./input.html">
+							<p>Input</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./typography.html">
+							<p>Typography</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./modal.html">
+							<p>Modal</p>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="mobile-sidebar" id="mobile-sidebar">
+				<div class="drawer">
+					<div class="drawer-header">
+						<h4 class="typo-label">Getting Started</h4>
+					</div>
+					<div class="drawer-body">
+						<a class="drawer-item link-no-style" href="./installation.html">
+							<p>Installation</p>
+						</a>
+					</div>
+					<div class="drawer-header">
+						<h4 class="typo-label">Components</h4>
+					</div>
+					<div class="drawer-body">
+						<a class="drawer-item link-no-style" href="./avatar.html">
+							<p>Avatar</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./alert.html">
+							<p>Alert</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./badge.html">
+							<p>Badge</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./button.html">
+							<p>Button</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./cards.html">
+							<p>Card</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./images.html">
+							<p>Image</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./input.html">
+							<p>Input</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./typography.html">
+							<p>Typography</p>
+						</a>
+						<a class="drawer-item link-no-style" href="./modal.html">
+							<p>Modal</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="main-content">
+				<!-- componen-1 -->
+				<div class="component-container">
+					<div class="component-intro">
+						<div class="title">Grid</div>
+						<div class="sub-title">
+							Grid can be used to create different responsive layouts.
+						</div>
+					</div>
+					<div class="component-example">
+						<div class="title">50-50 Grid</div>
+						<div class="sub-title">
+							Your container will be divided into 2 equal parts of the available
+							width.
+						</div>
+
+						<div class="component-display-container">
+							<div class="grid grid-50-50">
+								<div class="section1">Section1</div>
+								<div class="section2">Section2</div>
+							</div>
+						</div>
+
+						<div class="code-snippet-display">
+							<iframe
+								src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=solarized+dark&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Cdiv%2520class%253D%2522grid%2520grid-50-50%2522%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522section1%2522%253ESection1%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522section2%2522%253ESection2%253C%252Fdiv%253E%250A%253C%252Fdiv%253E"
+								sandbox="allow-scripts allow-same-origin"
+							>
+							</iframe>
+						</div>
+					</div>
+					<div class="component-example">
+						<div class="title">70-30 Grid</div>
+						<div class="sub-title">
+							This class will divide parent container into 2 section of width
+							70% and 30% of available width;
+						</div>
+
+						<div class="component-display-container">
+							<div class="grid grid-70-30">
+								<div class="section1">Section1</div>
+								<div class="section2">Section2</div>
+							</div>
+						</div>
+
+						<div class="code-snippet-display">
+							<iframe
+								src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=solarized+dark&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Cdiv%2520class%253D%2522grid%2520grid-70-30%2522%253E%250A%2520%2520%253Cdiv%2520class%253D%2522section1%2522%253ESection1%253C%252Fdiv%253E%250A%2520%2520%253Cdiv%2520class%253D%2522section2%2522%253ESection2%253C%252Fdiv%253E%250A%253C%252Fdiv%253E"
+								sandbox="allow-scripts allow-same-origin"
+							>
+							</iframe>
+						</div>
+					</div>
+					<div class="component-example">
+						<div class="title">30-70 Grid</div>
+						<div class="sub-title">
+							This class will divide parent container into 2 section of width
+							30% and 70% of available width;
+						</div>
+
+						<div class="component-display-container">
+							<div class="grid grid-30-70">
+								<div class="section1">Section1</div>
+								<div class="section2">Section2</div>
+							</div>
+						</div>
+
+						<div class="code-snippet-display">
+							<iframe
+								src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=solarized+dark&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Cdiv%2520class%253D%2522grid%2520grid-30-70%2522%253E%250A%2520%2520%253Cdiv%2520class%253D%2522section1%2522%253ESection1%253C%252Fdiv%253E%250A%2520%2520%253Cdiv%2520class%253D%2522section2%2522%253ESection2%253C%252Fdiv%253E%250A%253C%252Fdiv%253E"
+								sandbox="allow-scripts allow-same-origin"
+							>
+							</iframe>
+						</div>
+					</div>
+
+					<div class="component-example">
+						<div class="title">4 item responsive Grid</div>
+						<div class="sub-title">
+							This grid will have 4 items in a row in desktop view and changes
+							to 3 items,2 items and finally to 1 item as per screen size.
+						</div>
+
+						<div class="component-display-container">
+							<div class="grid grid-4-responsive">
+								<div class="section1">Section1</div>
+								<div class="section2">Section2</div>
+								<div class="section1">Section1</div>
+								<div class="section2">Section2</div>
+							</div>
+						</div>
+
+						<div class="code-snippet-display">
+							<iframe
+								src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=solarized+dark&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Cdiv%2520class%253D%2522grid%2520grid-4-responsive%2522%253E%250A%2520%2520%253Cdiv%2520class%253D%2522section1%2522%253ESection1%253C%252Fdiv%253E%250A%2520%2520%253Cdiv%2520class%253D%2522section2%2522%253ESection2%253C%252Fdiv%253E%250A%2520%2520%253Cdiv%2520class%253D%2522section1%2522%253ESection1%253C%252Fdiv%253E%250A%2520%2520%253Cdiv%2520class%253D%2522section2%2522%253ESection2%253C%252Fdiv%253E%250A%253C%252Fdiv%253E"
+								sandbox="allow-scripts allow-same-origin"
+							>
+							</iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

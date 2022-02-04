@@ -14,6 +14,7 @@
 @import url("./modal.css");
 @import url("./rating.css");
 @import url("./snackbar.css");
+@import url("./grid.css");
 /* setup */
 :root {
 	--primary-color: #017eff;
@@ -212,7 +213,7 @@ main {
 	cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
 	.btn-menu {
 		display: block;
 	}
