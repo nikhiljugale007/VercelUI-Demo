@@ -73,6 +73,7 @@ DARK:
 	--warning-color: #fac424;
 	--dark-warning-color: #feb203;
 	--highlight-color: #ccff00;
+	--card-bg-color: white;
 }
 html[data-theme="dark"] {
 	--primary-color: #0080ff;
@@ -91,6 +92,7 @@ html[data-theme="dark"] {
 
 	--primary-border-color: #595959;
 	--highlight-color: #ff3333;
+	--card-bg-color: #1f1f1e;
 }
 
 html {
