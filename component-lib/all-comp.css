@@ -264,6 +264,13 @@ iframe {
 	transform: scale(1);
 	overflow: scroll;
 }
+hr {
+	width: 100%;
+	margin: 4rem 0;
+}
+.link-no-style {
+	text-decoration: none;
+}
 
 @media screen and (max-width: 900px) {
 	.btn-menu {
@@ -297,11 +304,3 @@ iframe {
 		width: 400px;
 	}
 }
-hr {
-	width: 100%;
-	margin: 4rem 0;
-}
-.link-no-style {
-	text-decoration: none;
-}
-/* style="width: 680px; height: 578px; border:0; transform: scale(1); overflow:hidden;" */
