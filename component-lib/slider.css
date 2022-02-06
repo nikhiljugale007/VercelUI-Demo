@@ -1,0 +1,28 @@
+.slider-container {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin: 4rem auto;
+}
+.square-slider {
+	margin: auto;
+	-webkit-appearance: none;
+	position: relative;
+	overflow: hidden;
+	height: 3rem;
+	width: 20rem;
+	cursor: pointer;
+}
+
+.square-slider::-webkit-slider-runnable-track {
+	background: var(--card-bg-color);
+}
+
+.square-slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 2rem;
+	height: 3rem;
+	background: var(--complimentary-font-color);
+	box-shadow: -100vw 0 0 100vw var(--primary-color);
+	border: 2px solid var(--primary-border-color);
+}
