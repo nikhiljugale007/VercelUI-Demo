@@ -1,0 +1,27 @@
+.nav {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	justify-content: space-between;
+	background-color: var(--card-bg-color);
+	box-shadow: 0 5px 3px -3px var(--box-shadow);
+}
+.nav-sub-container {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+}
+
+@media screen and (max-width: 900px) {
+	.btn-menu {
+		display: block;
+	}
+	#btn-logo,
+	#btn-shop {
+		display: none;
+	}
+	.fa {
+		font-size: 1rem;
+	}
+}

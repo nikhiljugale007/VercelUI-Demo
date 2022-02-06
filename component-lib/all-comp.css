@@ -42,7 +42,7 @@
 	--warning-color: #fac424;
 	--dark-warning-color: #feb203;
 	--highlight-color: #ccff00;
-	--card-bg-color: white;
+	--card-bg-color: #f2f2f2;
 }
 html[data-theme="dark"] {
 	--primary-color: #0080ff;
