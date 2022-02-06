@@ -17,11 +17,7 @@
 	.btn-menu {
 		display: block;
 	}
-	#btn-logo,
-	#btn-shop {
+	.btn-hide {
 		display: none;
-	}
-	.fa {
-		font-size: 1rem;
 	}
 }
