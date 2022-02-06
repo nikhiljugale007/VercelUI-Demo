@@ -15,7 +15,7 @@
 }
 
 .square-slider::-webkit-slider-runnable-track {
-	background: var(--card-bg-color);
+	background: var(--hover-color);
 }
 
 .square-slider::-webkit-slider-thumb {
